@@ -19,11 +19,12 @@
     {
         \begin{cvitems}
             \item{Designed, backtested (QuantConnect + in-house engine) and \textbf{deployed live a systematic options strategy driven by dealer gamma exposure (GEX)} in the SPX market. Signal directly derived from my MSc thesis research on dealer hedging and intraday volatility dynamics.}
+            \item{Researched and prototyped a \textbf{systematic options market-making strategy}: skew-aware quoting, inventory-driven price skewing, and adverse-selection filters built on order-book microstructure features.}
+            \item{Built \textbf{low-latency execution components in Rust} (market-data ingestion, hot-path quote updates, order routing) with end-to-end latency profiling against the Python research stack.}
             \item{Built and systematized additional options strategies (Volatility Risk Premium, systematic put-writing), reaching \textbf{25\% annualized returns} over a 7-year backtest with a controlled drawdown ($\sim$25\%).}
             \item{Built \textbf{from scratch an event-driven options backtesting engine in Python + Numba}: vectorized hot paths, realistic friction modeling (bid-ask, slippage, commissions, margin, assignment), used alongside QuantConnect to validate every derivatives strategy before live deployment.}
-            \item{Built \textbf{from scratch a pricing engine for exotic options and structured products}, with Greeks computed via \textbf{Adjoint Algorithmic Differentiation (AAD)}. Monte Carlo pricing, PDE solvers, and full calibration of stochastic volatility models (Heston, SABR) on live volatility surfaces.}
-            \item{Developed systematic strategies on US equities, indices and fixed income (Momentum, Mean Reversion) to complement the options book.}
-            \item{Designed and operated cloud-native algorithmic trading infrastructure in Python (live execution and monitoring, 7-figure monthly notional), working closely with a derivatives trader to translate discretionary volatility ideas into fully automated, production-grade systems.}
+            \item{Built \textbf{from scratch a pricing engine for exotic options and structured products}, with Greeks computed via \textbf{Adjoint Algorithmic Differentiation (AAD)}. Monte Carlo pricing, PDE solvers, automated delta/gamma/vega hedging, and full calibration of stochastic volatility models (Heston, SABR, SVI) on live volatility surfaces.}
+            \item{Developed complementary systematic strategies on US equities, indices, fixed income (Momentum, Mean Reversion) and \textbf{intraday FX} (microstructure-driven signals on liquid majors), all running on a Python cloud-native execution and monitoring stack with 7-figure monthly notional.}
             \item{\textbf{Stack}: Python (Numba, NumPy, asyncio), C/C++, AAD, QuantLib, cloud infrastructure, custom backtesting \& pricing engines, risk analytics.}
         \end{cvitems}
     }
