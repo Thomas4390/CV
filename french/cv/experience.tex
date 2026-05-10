@@ -13,17 +13,18 @@
 
     \cventry
     {Chercheur quantitatif}
-    {\href{https://greenberg-management.com}{Greenberg Management}}
+    {Synerqo}
     {Montréal, Canada}
     {Juin 2025 - Présent}
     {
         \begin{cvitems}
-            \item{Développement et optimisation de stratégies de trading systématique (Momentum, Volatility Risk Premium, Mean Reversion) sur les actions américaines, indices, options et titres à revenu fixe.}
-            \item{Conception et implémentation de stratégies de volatilité exploitant le VRP par la vente systématique de puts, atteignant un \textbf{rendement annualisé de 25\%} sur 7 ans avec un drawdown contrôlé ($\sim$25\%).}
-            \item{Construction d'une infrastructure de trading algorithmique sur le cloud en Python; exécution et suivi de stratégies avec un volume mensuel à 7 chiffres.}
-            \item{Collaboration avec un trader en produits dérivés pour systématiser des stratégies de volatilité discrétionnaires en systèmes de trading entièrement automatisés.}
-            \item{Recherche quantitative sur le pricing d'options, la dynamique des Greeks et la microstructure des marchés pour améliorer la génération de signaux et l'exécution.}
-            \item{\textbf{Stack}: Python, infrastructure cloud, analytics d'options, exécution algorithmique, frameworks de backtesting, gestion des risques.}
+            \item{Conception, backtesting (QuantConnect + moteur maison) et \textbf{déploiement en live d'une stratégie systématique d'options basée sur le gamma exposure (GEX)} du marché SPX -- signal directement issu de mes recherches de mémoire sur le dealer hedging et la dynamique de volatilité intraday.}
+            \item{Développement et systématisation d'autres stratégies d'options (Volatility Risk Premium, vente systématique de puts), atteignant un \textbf{rendement annualisé de 25\%} sur 7 ans avec un drawdown contrôlé ($\sim$25\%).}
+            \item{Construction \textbf{from scratch d'un moteur de backtesting d'options en Python + Numba} -- event-driven, chemins critiques vectorisés, modélisation réaliste des frictions (bid-ask, slippage, commissions, marge, assignation) -- utilisé en parallèle de QuantConnect pour valider chaque stratégie de dérivés avant déploiement live.}
+            \item{Construction \textbf{from scratch d'un moteur de pricing d'options exotiques et de produits structurés}, avec calcul des Greeks par \textbf{différenciation algorithmique adjointe (AAD)} -- pricing Monte Carlo, solveurs EDP et calibration complète de modèles de volatilité stochastique (Heston, SABR) sur surfaces de vol live.}
+            \item{Développement de stratégies systématiques sur actions américaines, indices et titres à revenu fixe (Momentum, Mean Reversion) en complément du livre d'options.}
+            \item{Conception et opération d'une infrastructure de trading algorithmique cloud-native en Python (exécution et monitoring en live, volume mensuel à 7 chiffres), en collaboration étroite avec un trader en dérivés pour transformer ses idées discrétionnaires de volatilité en systèmes entièrement automatisés.}
+            \item{\textbf{Stack}: Python (Numba, NumPy, asyncio), C/C++, AAD, QuantLib, infrastructure cloud, moteurs maison de backtesting \& pricing, analytics de risque.}
         \end{cvitems}
     }
 
@@ -57,7 +58,7 @@
       \item{Réalisation d'économies annuelles de \textbf{1M\$} grâce à l'optimisation des stratégies et la migration d'un fournisseur externe vers les systèmes de production internes.}
       \item{Construction d'un framework de backtesting complet en Python: génération de signaux, construction de portefeuille, modélisation des coûts de transaction, analytics de risque et attribution de performance.}
       \item{Implémentation d'algorithmes d'optimisation de portefeuille avec contraintes (limites de turnover, exposition sectorielle, tilts factoriels) via optimisation convexe (cvxpy).}
-      \item{Livraison de rapports quantitatifs hebdomadaires aux parties prenantes; présentation des performances et métriques de risque au desk de trading et gestionnaires de portefeuille.}
+      \item{Livraison de rapports quantitatifs hebdomadaires aux parties prenantes et présentation des performances et métriques de risque au desk de trading et gestionnaires de portefeuille.}
       \item{Collaboration avec les équipes de structuration et trading pour intégrer les signaux quantitatifs dans le pricing et la couverture de produits dérivés exotiques.}
       \item{\textbf{Stack}: Python (POO), Terminal \& API Bloomberg, SQL, AWS (EC2, S3), algorithmes d'optimisation, tests statistiques.}
     \end{cvitems}
@@ -73,7 +74,7 @@
     {Avril 2020 - Juin 2021}
     {
       \begin{cvitems}
-        \item{Conception et livraison d'un curriculum de science des données (Python, statistiques, ML) pour la plateforme \textit{Videns Academy}; contenu adopté par l'UQAC pour un cours universitaire.}
+        \item{Conception et livraison d'un curriculum de science des données (Python, statistiques, ML) pour la plateforme \textit{Videns Academy} -- contenu adopté par l'UQAC pour un cours universitaire.}
         \item{Construction de modèles prédictifs et pipelines de rapports automatisés pour des clients en assurance, améliorant l'analyse des réclamations et les processus d'évaluation des risques.}
         \item{Direction d'engagements de consultation en analytique d'assurance: nettoyage de données, analyse exploratoire et développement de tableaux de bord pour la prise de décision client.}
         \item{Promotion de stagiaire à analyste de données à temps plein basée sur la livraison de projets et la satisfaction client.}

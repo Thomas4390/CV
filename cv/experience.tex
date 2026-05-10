@@ -13,17 +13,18 @@
 
     \cventry
     {Quantitative Researcher}
-    {\href{https://greenberg-management.com}{Greenberg Management}}
+    {Synerqo}
     {Montreal, Canada}
     {May 2025 - Present}
     {
         \begin{cvitems}
-            \item{Develop and optimize systematic trading strategies (Momentum, Volatility Risk Premium, Mean Reversion) across US equities, indices, options, and fixed income markets.}
-            \item{Design and implement volatility strategies harvesting the VRP through systematic derivatives trading, achieving \textbf{25\% annualized returns} over a 7-year period with controlled drawdown ($\sim$25\%).}
-            \item{Build cloud-based algorithmic trading infrastructure in Python; execute and monitor strategies with 7-figure monthly volume.}
-            \item{Collaborate with derivatives trader to systematize discretionary volatility strategies into fully automated trading systems.}
-            \item{Conduct quantitative research on options pricing, Greeks dynamics, and market microstructure to enhance signal generation and execution.}
-            \item{\textbf{Stack}: Python, cloud infrastructure, options analytics, algorithmic execution, backtesting frameworks, risk management.}
+            \item{Designed, backtested (QuantConnect + in-house engine) and \textbf{deployed live a systematic options strategy driven by dealer gamma exposure (GEX)} in the SPX market -- signal directly derived from my MSc thesis research on dealer hedging and intraday volatility dynamics.}
+            \item{Built and systematized additional options strategies (Volatility Risk Premium, systematic put-writing), reaching \textbf{25\% annualized returns} over a 7-year backtest with a controlled drawdown ($\sim$25\%).}
+            \item{Built \textbf{from scratch an event-driven options backtesting engine in Python + Numba} -- vectorized hot paths, realistic friction modeling (bid-ask, slippage, commissions, margin, assignment) -- used alongside QuantConnect to validate every derivatives strategy before live deployment.}
+            \item{Built \textbf{from scratch a pricing engine for exotic options and structured products}, with Greeks computed via \textbf{Adjoint Algorithmic Differentiation (AAD)} -- Monte Carlo pricing, PDE solvers, and full calibration of stochastic volatility models (Heston, SABR) on live volatility surfaces.}
+            \item{Developed systematic strategies on US equities, indices and fixed income (Momentum, Mean Reversion) to complement the options book.}
+            \item{Designed and operated cloud-native algorithmic trading infrastructure in Python (live execution and monitoring, 7-figure monthly notional), working closely with a derivatives trader to translate discretionary volatility ideas into fully automated, production-grade systems.}
+            \item{\textbf{Stack}: Python (Numba, NumPy, asyncio), C/C++, AAD, QuantLib, cloud infrastructure, custom backtesting \& pricing engines, risk analytics.}
         \end{cvitems}
     }
 
@@ -57,7 +58,7 @@
       \item{Achieved \textbf{\$1M annual cost savings} through strategy optimization and migration from external vendor to internal production systems.}
       \item{Built end-to-end backtesting framework in Python: signal generation, portfolio construction, transaction cost modeling, risk analytics, and performance attribution.}
       \item{Implemented portfolio optimization algorithms with constraints (turnover limits, sector exposure, factor tilts) using convex optimization (cvxpy).}
-      \item{Delivered weekly quantitative reports to senior stakeholders; presented strategy performance and risk metrics to trading desk and portfolio managers.}
+      \item{Delivered weekly quantitative reports to senior stakeholders and presented strategy performance and risk metrics to trading desk and portfolio managers.}
       \item{Collaborated with structuring and trading teams to integrate quantitative signals into exotic derivatives pricing and hedging workflows.}
       \item{\textbf{Stack}: Python (OOP), Bloomberg Terminal \& API, SQL, AWS (EC2, S3), optimization algorithms, statistical testing.}
     \end{cvitems}
@@ -73,7 +74,7 @@
     {April 2020 - June 2021} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item{Designed and delivered data science curriculum (Python, statistics, ML) for \textit{Videns Academy} platform; content adopted by UQAC for university course.}
+        \item{Designed and delivered data science curriculum (Python, statistics, ML) for \textit{Videns Academy} platform -- content adopted by UQAC for university course.}
         \item{Built predictive models and automated reporting pipelines for insurance clients, improving claims analysis and risk assessment workflows.}
         \item{Led consulting engagements in insurance analytics: data cleaning, exploratory analysis, and dashboard development for client decision-making.}
         \item{Promoted from intern to full-time Data Analyst based on project delivery and client satisfaction.}
