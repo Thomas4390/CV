@@ -1,86 +1,62 @@
-%-------------------------------------------------------------------------------
-%	SECTION TITLE
-%-------------------------------------------------------------------------------
 \cvsection{Expérience professionnelle}
-
-
-%-------------------------------------------------------------------------------
-% CONTENT
-%-------------------------------------------------------------------------------
 \begin{cventries}
 
-%---------------------------------------------------------
-
-    \cventry
+  \cventry
     {Chercheur quantitatif}
     {Synerqo}
     {Montréal, Canada}
-    {Juin 2025 - Présent}
+    {Mai 2025 - Aujourd'hui}
     {
-        \begin{cvitems}
-            \item{Conception, backtesting (QuantConnect + moteur maison) et \textbf{déploiement en live d'une stratégie systématique d'options basée sur le gamma exposure (GEX)} du marché SPX. Signal directement issu de mes recherches de mémoire sur le dealer hedging et la dynamique de volatilité intraday.}
-            \item{Recherche et prototypage d'une \textbf{stratégie systématique de market making sur options}: quoting sensible au skew, biais de prix piloté par l'inventaire, filtres d'adverse selection construits sur les features de microstructure du carnet.}
-            \item{Développement de \textbf{composants d'exécution à basse latence en Rust} (ingestion de données de marché, mises à jour de quotes sur le hot-path, routing d'ordres) avec profiling latence bout-en-bout face à la pile de recherche Python.}
-            \item{Développement et systématisation d'autres stratégies d'options (Volatility Risk Premium, vente systématique de puts), atteignant un \textbf{rendement annualisé de 25\%} sur 7 ans avec un drawdown contrôlé ($\sim$25\%).}
-            \item{Construction \textbf{from scratch d'un moteur de backtesting d'options en Python + Numba}: event-driven, chemins critiques vectorisés, modélisation réaliste des frictions (bid-ask, slippage, commissions, marge, assignation), utilisé en parallèle de QuantConnect pour valider chaque stratégie de dérivés avant déploiement live.}
-            \item{Construction \textbf{from scratch d'un moteur de pricing d'options exotiques et de produits structurés}, avec calcul des Greeks par \textbf{différenciation algorithmique adjointe (AAD)}. Pricing Monte Carlo, solveurs EDP, couverture automatique delta/gamma/vega et calibration de modèles de volatilité stochastique (Heston, SABR, SVI) robuste aux dislocations de surface (inversions de term structure, changements de régime de skew).}
-            \item{Développement de stratégies systématiques complémentaires sur actions américaines, indices, titres à revenu fixe (Momentum, Mean Reversion) et \textbf{FX intraday} (signaux de microstructure sur majors liquides), exécutées sur une pile cloud-native Python avec monitoring live et volume mensuel à 7 chiffres.}
-            \item{\textbf{Stack}: Python (Numba, NumPy, asyncio), C/C++, AAD, QuantLib, infrastructure cloud, moteurs maison de backtesting \& pricing, analytics de risque.}
-        \end{cvitems}
+      \begin{cvitems}
+        \item{Développement d'un \textbf{CRM sur mesure et d'un portail conseiller pour un client du secteur des assurances}, intégrant traitement des commissions, signature électronique et tableaux de bord commerciaux, avec une optimisation des processus métier et \textbf{plusieurs dizaines de milliers de dollars d'économies}.}
+        \item{Conception, développement et déploiement de \textbf{\href{https://ganesha.synerqo.com/fr}{Ganesha}}, l'assistant d'IA de Synerqo pour les entreprises de services professionnels, combinant recherche documentaire et IA générative (RAG), réponses reliées aux sources, génération de documents et processus adaptés à la documentation et aux méthodes de chaque client.}
+        \item{Construction d'un \textbf{moteur de backtest événementiel sur options en Python et Numba}, intégrant écarts acheteur-vendeur, glissement, commissions, marge et assignation pour valider les stratégies avant mise en production, en complément de QuantConnect.}
+        \item{Développement d'un \textbf{moteur de valorisation d'options exotiques et de produits structurés} avec Monte Carlo, solveurs d'EDP, sensibilités par \textbf{différentiation algorithmique adjointe (AAD)}, couverture automatisée et calibration Heston, SABR et SVI.}
+        \item{Développement de \textbf{composants d'exécution en Rust} pour l'ingestion des données de marché, les cotations et le routage des ordres, avec mesure de la latence face à l'environnement de recherche Python.}
+        \item{Conception, backtest et \textbf{mise en production d'une stratégie systématique sur options SPX}, issue du mémoire de maîtrise sur l'exposition gamma des teneurs de marché.}
+        \item{\textbf{Technologies :} Python, C++, Rust, TypeScript, React/Next.js, FastAPI, PostgreSQL, QuantLib, QuantConnect.}
+      \end{cvitems}
     }
 
-%---------------------------------------------------------
-
-    \cventry
-    {Analyste quantitatif}
-    {\href{https://www2.deloitte.com/ca/en/pages/about-deloitte/articles/home.html}{Financial Engineering \& Modeling - Financial Risk | Deloitte}}
+  \cventry
+    {Analyste quantitatif | Ingénierie financière et modélisation des risques}
+    {Deloitte}
     {Montréal, Canada}
     {Octobre 2024 - Juin 2025}
     {
-        \begin{cvitems}
-            \item{Développement et validation de modèles de risque de crédit (PD, LGD, EAD) pour des institutions financières canadiennes majeures selon les cadres réglementaires IFRS 9 et Bâle III/IV.}
-            \item{Direction d'engagements de validation de modèles indépendants: backtesting statistique, analyse de sensibilité, tests de stress et documentation réglementaire pour la conformité BSIF.}
-            \item{Évaluation quantitative des hypothèses de modèles, méthodologies de calibration et pouvoir discriminant à l'aide des coefficients de Gini et statistiques KS.}
-            \item{Construction de tableaux de bord automatisés de suivi des modèles et pipelines de validation en Python, réduisant le temps de revue manuelle de \textbf{40\%}.}
-            \item{Rédaction de rapports techniques de validation et présentation des conclusions aux parties prenantes et comités de risque des clients.}
-            \item{\textbf{Stack}: Python, R, SQL, modélisation statistique, conformité réglementaire (IFRS 9, Bâle III/IV, lignes directrices du BSIF).}
-        \end{cvitems}
+      \begin{cvitems}
+        \item{Développement et validation de \textbf{modèles de risque de crédit (PD, LGD, EAD)} pour de grandes institutions financières canadiennes, dans les cadres IFRS 9 et Bâle III/IV.}
+        \item{Pilotage de missions de validation indépendante avec analyse des hypothèses, de la calibration et du pouvoir discriminant, tests rétrospectifs, analyses de sensibilité et tests de résistance.}
+        \item{Création de \textbf{tableaux de bord de suivi et de chaînes de validation automatisées en Python}, réduisant de \textbf{40\,\%} le temps de revue manuelle.}
+        \item{Rédaction de rapports techniques et de documentation réglementaire, puis présentation des conclusions aux \textbf{dirigeants et comités de risque des clients}, dans le cadre des exigences du BSIF.}
+        \item{\textbf{Technologies :} Python, R, SQL, modélisation statistique, suivi et validation de modèles.}
+      \end{cvitems}
     }
 
-%---------------------------------------------------------
-   \cventry
-    {Stagiaire développeur quantitatif}
-    {\href{https://bnmf.ca}{Global Equity Derivatives R\&D - Produits structurés \& Exotiques | Banque Nationale Marchés Financiers}}
+  \cventry
+    {Stagiaire développeur quantitatif | R\&D, dérivés sur actions}
+    {Banque Nationale Marchés financiers}
     {Montréal, Canada}
     {Mai 2023 - Décembre 2023}
     {
       \begin{cvitems}
-      \item{Développement et déploiement de stratégies SmartBeta (Low Volatility, Momentum) gérant \textbf{800M\$ d'actifs} au sein d'une division de produits structurés de 7G\$.}
-      \item{Réalisation d'économies annuelles de \textbf{1M\$} grâce à l'optimisation des stratégies et la migration d'un fournisseur externe vers les systèmes de production internes.}
-      \item{Construction d'un framework de backtesting complet en Python: génération de signaux, construction de portefeuille, modélisation des coûts de transaction, analytics de risque et attribution de performance.}
-      \item{Implémentation d'algorithmes d'optimisation de portefeuille avec contraintes (limites de turnover, exposition sectorielle, tilts factoriels) via optimisation convexe (cvxpy).}
-      \item{Livraison de rapports quantitatifs hebdomadaires aux parties prenantes et présentation des performances et métriques de risque au desk de trading et gestionnaires de portefeuille.}
-      \item{Collaboration avec les équipes de structuration et trading pour intégrer les signaux quantitatifs dans le pricing et la couverture de produits dérivés exotiques.}
-      \item{\textbf{Stack}: Python (POO), Terminal \& API Bloomberg, SQL, AWS (EC2, S3), algorithmes d'optimisation, tests statistiques.}
-    \end{cvitems}
+        \item{Réalisation de \textbf{1 M\$ d'économies annuelles} grâce à l'optimisation des stratégies et à la migration d'un fournisseur externe vers des systèmes de production internes.}
+        \item{Construction d'une \textbf{plateforme complète de backtest en Python} couvrant signaux, construction de portefeuille, coûts de transaction, analyses de risque et attribution de performance.}
+        \item{Développement et déploiement de stratégies de faible volatilité et de momentum \textbf{SmartBeta couvrant 800 M\$ d'actifs sous gestion}, au sein d'une division de produits structurés de 7 G\$, avec optimisation de portefeuille sous contraintes via cvxpy.}
+        \item{Collaboration avec les \textbf{équipes de structuration et de négociation} pour intégrer les signaux aux outils de valorisation et de couverture, et rapports de performance et de risque destinés aux négociateurs et gestionnaires.}
+        \item{\textbf{Technologies :} Python, cvxpy, SQL, terminal et API Bloomberg, AWS (EC2, S3), tests statistiques.}
+      \end{cvitems}
     }
-
-%---------------------------------------------------------
-
 
   \cventry
     {Analyste de données}
-    {\href{https://www.vidensanalytics.com}{Videns Analytics}}
+    {Videns Analytics}
     {Montréal, Canada}
     {Avril 2020 - Juin 2021}
     {
       \begin{cvitems}
-        \item{Conception et livraison d'un curriculum de science des données (Python, statistiques, ML) pour la plateforme \textit{Videns Academy}. Contenu adopté par l'UQAC pour un cours universitaire.}
-        \item{Construction de modèles prédictifs et pipelines de rapports automatisés pour des clients en assurance, améliorant l'analyse des réclamations et les processus d'évaluation des risques.}
-        \item{Direction d'engagements de consultation en analytique d'assurance: nettoyage de données, analyse exploratoire et développement de tableaux de bord pour la prise de décision client.}
-        \item{Promotion de stagiaire à analyste de données à temps plein basée sur la livraison de projets et la satisfaction client.}
+        \item{Pilotage de \textbf{missions de conseil en analytique pour l'assurance}, du nettoyage et de l'exploration des données aux modèles prédictifs et rapports automatisés pour appuyer les décisions des clients.}
+        \item{Conception et animation d'un \textbf{programme de formation en Python, statistiques et apprentissage automatique}, repris par l'UQAC pour un cours universitaire. Promotion de stagiaire à analyste à temps plein.}
       \end{cvitems}
     }
-
-%---------------------------------------------------------
 \end{cventries}

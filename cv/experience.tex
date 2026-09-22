@@ -1,86 +1,62 @@
-%-------------------------------------------------------------------------------
-%	SECTION TITLE
-%-------------------------------------------------------------------------------
 \cvsection{Professional Experience}
-
-
-%-------------------------------------------------------------------------------
-% CONTENT
-%-------------------------------------------------------------------------------
 \begin{cventries}
 
-%---------------------------------------------------------
-
-    \cventry
+  \cventry
     {Quantitative Researcher}
     {Synerqo}
     {Montreal, Canada}
     {May 2025 - Present}
     {
-        \begin{cvitems}
-            \item{Designed, backtested (QuantConnect + in-house engine) and \textbf{deployed live a systematic options strategy driven by dealer gamma exposure (GEX)} in the SPX market. Signal directly derived from my MSc thesis research on dealer hedging and intraday volatility dynamics.}
-            \item{Researched and prototyped a \textbf{systematic options market-making strategy}: skew-aware quoting, inventory-driven price skewing, and adverse-selection filters built on order-book microstructure features.}
-            \item{Built \textbf{low-latency execution components in Rust} (market-data ingestion, hot-path quote updates, order routing) with end-to-end latency profiling against the Python research stack.}
-            \item{Built and systematized additional options strategies (Volatility Risk Premium, systematic put-writing), reaching \textbf{25\% annualized returns} over a 7-year backtest with a controlled drawdown ($\sim$25\%).}
-            \item{Built \textbf{from scratch an event-driven options backtesting engine in Python + Numba}: vectorized hot paths, realistic friction modeling (bid-ask, slippage, commissions, margin, assignment), used alongside QuantConnect to validate every derivatives strategy before live deployment.}
-            \item{Built \textbf{from scratch a pricing engine for exotic options and structured products}, with Greeks computed via \textbf{Adjoint Algorithmic Differentiation (AAD)}. Monte Carlo pricing, PDE solvers, automated delta/gamma/vega hedging, and calibration of stochastic volatility models (Heston, SABR, SVI) robust to surface dislocations (term-structure inversions, skew regime shifts).}
-            \item{Developed complementary systematic strategies on US equities, indices, fixed income (Momentum, Mean Reversion) and \textbf{intraday FX} (microstructure-driven signals on liquid majors), all running on a Python cloud-native execution and monitoring stack with 7-figure monthly notional.}
-            \item{\textbf{Stack}: Python (Numba, NumPy, asyncio), C/C++, AAD, QuantLib, cloud infrastructure, custom backtesting \& pricing engines, risk analytics.}
-        \end{cvitems}
-    }
-
-%---------------------------------------------------------
-
-    \cventry
-    {Quantitative Analyst}
-    {\href{https://www2.deloitte.com/ca/en/pages/about-deloitte/articles/home.html}{Financial Engineering \& Modeling - Financial Risk | Deloitte}}
-    {Montreal, Canada}
-    {October 2024 - June 2025}
-    {
-        \begin{cvitems}
-            \item{Developed and validated credit risk models (PD, LGD, EAD) for major Canadian financial institutions under IFRS 9 and Basel III/IV regulatory frameworks.}
-            \item{Led independent model validation engagements: statistical backtesting, sensitivity analysis, stress testing, and regulatory documentation for OSFI compliance.}
-            \item{Performed quantitative assessment of model assumptions, calibration methodologies, and discriminatory power using Gini coefficients and KS statistics.}
-            \item{Built automated model monitoring dashboards and validation pipelines in Python, reducing manual review time by \textbf{40\%}.}
-            \item{Authored technical validation reports and presented findings to senior stakeholders and client risk committees.}
-            \item{\textbf{Stack}: Python, R, SQL, statistical modeling, regulatory compliance (IFRS 9, Basel III/IV, OSFI guidelines).}
-        \end{cvitems}
-    }
-
-%---------------------------------------------------------
-   \cventry
-    {Quantitative Developer Intern} % Job title
-    {\href{https://bnmf.ca}{Global Equity Derivatives R\&D - Structured Products \& Exotics | National Bank Financial Markets}} % Organization
-    {Montreal, Canada} % Location
-    {May 2023 - December 2023} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-      \item{Developed and deployed SmartBeta strategies (Low Volatility, Momentum) managing \textbf{\$800M AUM} within a \$7B structured products division.}
-      \item{Achieved \textbf{\$1M annual cost savings} through strategy optimization and migration from external vendor to internal production systems.}
-      \item{Built end-to-end backtesting framework in Python: signal generation, portfolio construction, transaction cost modeling, risk analytics, and performance attribution.}
-      \item{Implemented portfolio optimization algorithms with constraints (turnover limits, sector exposure, factor tilts) using convex optimization (cvxpy).}
-      \item{Delivered weekly quantitative reports to senior stakeholders and presented strategy performance and risk metrics to trading desk and portfolio managers.}
-      \item{Collaborated with structuring and trading teams to integrate quantitative signals into exotic derivatives pricing and hedging workflows.}
-      \item{\textbf{Stack}: Python (OOP), Bloomberg Terminal \& API, SQL, AWS (EC2, S3), optimization algorithms, statistical testing.}
-    \end{cvitems}
-    }
-
-%---------------------------------------------------------
-
-  
-  \cventry
-    {Data Analyst} % Job title
-    {\href{https://www.vidensanalytics.com}{Videns Analytics}} % Organisation
-    {Montreal, Canada} % Location
-    {April 2020 - June 2021} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item{Designed and delivered data science curriculum (Python, statistics, ML) for \textit{Videns Academy} platform. Content adopted by UQAC for a university course.}
-        \item{Built predictive models and automated reporting pipelines for insurance clients, improving claims analysis and risk assessment workflows.}
-        \item{Led consulting engagements in insurance analytics: data cleaning, exploratory analysis, and dashboard development for client decision-making.}
-        \item{Promoted from intern to full-time Data Analyst based on project delivery and client satisfaction.}
+      \begin{cvitems}
+        \item{Developed a \textbf{custom CRM and advisor portal for an insurance-sector client}, integrating commission processing, electronic signatures and sales dashboards, streamlining business processes and \textbf{saving the client tens of thousands of dollars}.}
+        \item{Designed, built and deployed \textbf{\href{https://ganesha.synerqo.com}{Ganesha}}, Synerqo's AI knowledge assistant for professional services firms, combining retrieval-augmented generation (RAG) over internal documents, answers linked to their sources, document generation and workflows tailored to each client's methods.}
+        \item{Built an \textbf{event-driven options backtesting engine in Python and Numba}, modeling spreads, slippage, commissions, margin and assignment to validate strategies alongside QuantConnect before live deployment.}
+        \item{Built an \textbf{exotic options and structured products pricing engine} with Monte Carlo, PDE solvers, Greeks via \textbf{Adjoint Algorithmic Differentiation (AAD)}, automated hedging, and Heston, SABR and SVI calibration.}
+        \item{Developed \textbf{Rust execution components} for market-data ingestion, quote updates and order routing, with latency profiling against the Python research stack.}
+        \item{Designed, backtested and \textbf{deployed a systematic SPX options strategy to live trading}, translating MSc research on dealer gamma exposure into a production signal and execution workflow.}
+        \item{\textbf{Technologies:} Python, C++, Rust, TypeScript, React/Next.js, FastAPI, PostgreSQL, QuantLib, QuantConnect.}
       \end{cvitems}
     }
 
-%---------------------------------------------------------
+  \cventry
+    {Quantitative Analyst | Financial Engineering \& Modeling - Financial Risk}
+    {Deloitte}
+    {Montreal, Canada}
+    {October 2024 - June 2025}
+    {
+      \begin{cvitems}
+        \item{Developed and validated \textbf{credit risk models (PD, LGD, EAD)} for major Canadian financial institutions under IFRS 9 and Basel III/IV frameworks.}
+        \item{Led independent model validation engagements, assessing assumptions, calibration and discriminatory power through statistical backtesting, sensitivity analysis and stress testing.}
+        \item{Built \textbf{automated monitoring dashboards and validation pipelines in Python}, reducing manual review time by \textbf{40\%}.}
+        \item{Authored technical validation reports and regulatory documentation, presenting findings to \textbf{senior stakeholders and client risk committees} in the context of OSFI requirements.}
+        \item{\textbf{Technologies:} Python, R, SQL, statistical modeling, model monitoring and validation.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Quantitative Developer Intern | Global Equity Derivatives R\&D}
+    {National Bank Financial Markets}
+    {Montreal, Canada}
+    {May 2023 - December 2023}
+    {
+      \begin{cvitems}
+        \item{Delivered \textbf{\$1M in annual cost savings} through strategy optimization and migration from an external vendor to internal production systems.}
+        \item{Built an \textbf{end-to-end Python backtesting framework} covering signal generation, portfolio construction, transaction costs, risk analytics and performance attribution.}
+        \item{Developed and deployed low-volatility and momentum \textbf{SmartBeta strategies covering \$800M in AUM} within a \$7B structured products division, implementing constrained portfolio optimization with cvxpy.}
+        \item{Worked with \textbf{structuring and trading teams} to integrate quantitative signals into derivatives pricing and hedging workflows and delivered performance and risk reports to the trading desk and portfolio managers.}
+        \item{\textbf{Technologies:} Python, cvxpy, SQL, Bloomberg Terminal \& API, AWS (EC2, S3), statistical testing.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Data Analyst}
+    {Videns Analytics}
+    {Montreal, Canada}
+    {April 2020 - June 2021}
+    {
+      \begin{cvitems}
+        \item{Led \textbf{consulting engagements in insurance analytics}: data cleaning, exploratory analysis, predictive modeling and automated reporting to support client decision-making.}
+        \item{Designed and delivered a \textbf{Python, statistics and machine learning curriculum} for Videns Academy, adopted by UQAC for a university course. Promoted from intern to full-time Data Analyst.}
+      \end{cvitems}
+    }
 \end{cventries}
