@@ -8,6 +8,7 @@ Consultant développeur en finance quantitative · Quantitative Developer & Fina
 | --- | --- | --- |
 | Français | [CV français — 2 pages](french/out/CV_Thomas_Vaudescal_FR.pdf) | [french/resume.tex](french/resume.tex) |
 | English | [English CV — 2 pages](out/CV_Thomas_Vaudescal_EN.pdf) | [resume.tex](resume.tex) |
+| English, quant | [Quant Developer / Researcher CV, 1 page](out/CV_Thomas_Vaudescal_Quant_Graduate.pdf) | [quant-graduate/resume.tex](quant-graduate/resume.tex) |
 
 Les deux versions utilisent le gabarit Russell original et présentent le même parcours. Les rubriques sont réparties dans `cv/` et `french/cv/`.
 
@@ -29,4 +30,10 @@ Version française, depuis le dossier `french/` / French version, from the `fren
 
 ```bash
 xelatex -interaction=nonstopmode -halt-on-error -output-directory=out -jobname=CV_Thomas_Vaudescal_FR resume.tex
+```
+
+Version quant d'une page, depuis le dossier `quant-graduate/` / One-page quant version, from the `quant-graduate/` directory (classe `russell-ats`, polices du dossier `fonts/` / `russell-ats` class, fonts from the `fonts/` folder):
+
+```bash
+xelatex -interaction=nonstopmode -halt-on-error -output-directory=../out -jobname=CV_Thomas_Vaudescal_Quant_Graduate resume.tex
 ```

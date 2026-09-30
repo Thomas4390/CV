@@ -1,0 +1,50 @@
+\cvsection{Professional Experience}
+\begin{cventries}
+
+  \cvrow
+    {Synerqo}
+    {Founder \& Quantitative Researcher}
+    {Montréal | May 2025 - Present}
+    {
+      \begin{cvitems}
+        \item{Built an in-house \textbf{event-driven options backtesting engine in Python and Numba}, modeling spreads, slippage, commissions, margin and assignment, and validating strategies against QuantConnect before live deployment. Runs a backtest over one month of SPX intraday option chains (3.7M rows) in about 40 ms, 4x to 7x faster than the same code with Numba disabled, with identical results.}
+        \item{Wrote \textbf{from scratch an exotic options and structured products pricing engine} with Monte Carlo and PDE solvers, Greeks via \textbf{Adjoint Algorithmic Differentiation (AAD)} on JAX, and Heston, SABR and SVI calibration. Greeks cost about 3x one price (GBM, 500k paths) and run 2.9x faster than bump-and-reprice, within 0.25\% of Black-Scholes.}
+        \item{Developed \textbf{Rust execution components} for market-data ingestion, quote updates and order routing, and profiled their latency against the Python research stack.}
+        \item{Designed, backtested and \textbf{deployed a systematic SPX options strategy to live trading}, turning MSc research on dealer gamma exposure into a production signal and execution workflow.}
+        \item{Prototyped systematic options market making with skew-aware quoting, inventory-based price adjustments and microstructure-based adverse-selection filters.}
+      \end{cvitems}
+    }
+
+  \cvrow
+    {Deloitte}
+    {Quantitative Analyst}
+    {Montréal | October 2024 - June 2025}
+    {
+      \begin{cvitems}
+        \item{Developed and validated \textbf{credit risk models (PD, LGD, EAD)} for major Canadian financial institutions. Led independent validation through statistical backtesting, sensitivity analysis and stress testing.}
+        \item{Built \textbf{automated monitoring and validation pipelines in Python}, reducing manual review time by \textbf{40\%}.}
+      \end{cvitems}
+    }
+
+  \cvrow
+    {National Bank Financial Markets}
+    {Quantitative Developer Intern}
+    {Montréal | May 2023 - December 2023}
+    {
+      \begin{cvitems}
+        \item{In Global Equity Derivatives R\&D, developed and deployed low-volatility and momentum \textbf{SmartBeta strategies covering \$800M in AUM} within a \$7B structured products division, with constrained portfolio optimization (cvxpy).}
+        \item{Built an \textbf{end-to-end Python backtesting framework}: signal generation, portfolio construction, transaction costs, risk analytics and performance attribution.}
+        \item{Delivered \textbf{\$1M in annual cost savings} by migrating strategies from an external vendor to internal production systems.}
+      \end{cvitems}
+    }
+
+  \cvrow
+    {Videns Analytics}
+    {Data Analyst}
+    {Montréal | April 2020 - June 2021}
+    {
+      \begin{cvitems}
+        \item{Built predictive models and reporting for insurance clients. Designed a \textbf{Python and machine learning curriculum} adopted by UQAC.}
+      \end{cvitems}
+    }
+\end{cventries}

@@ -1,0 +1,68 @@
+% CV one page for a Graduate Quant Developer / Quant Researcher application (Montreal).
+% Based on the ATS class russell-ats (no icons, Roboto embedded). Compile with XeLaTeX from this directory:
+%   xelatex -interaction=nonstopmode -halt-on-error -output-directory=../out -jobname=CV_Thomas_Vaudescal_Quant_Graduate resume.tex
+\documentclass[10pt,letterpaper]{russell-ats}
+\geometry{left=1.4cm, top=.5cm, right=1.4cm, bottom=.6cm, footskip=.2cm}
+\fontdir[../fonts/]
+\colorlet{russell}{russell-black}
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+\renewcommand{\acvHeaderAfterSocialSkip}{3mm}
+\renewcommand{\acvSectionTopSkip}{1.6mm}
+\setlength{\acvSkillLabelWidth}{2.7cm}
+\renewcommand{\acvSectionContentTopSkip}{1.4mm}
+
+% Compact type scale so that the whole CV fits on one page.
+\makeatletter
+\renewcommand*{\sectionstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\makeatother
+\renewcommand*{\paragraphstyle}{\fontsize{8.6pt}{1em}\bodyfontlight\upshape\color{text}}
+\renewcommand*{\entrytitlestyle}[1]{{\fontsize{9.4pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\renewcommand*{\entrypositionstyle}[1]{{\fontsize{8.6pt}{1em}\bodyfont\color{graytext} #1}}
+\renewcommand*{\entrydatestyle}[1]{{\fontsize{7.8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\renewcommand*{\entrylocationstyle}[1]{{\fontsize{8.2pt}{1em}\bodyfontlight\slshape\color{russell} #1}}
+\renewcommand*{\descriptionstyle}[1]{{\fontsize{8.6pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\renewcommand*{\skilltypestyle}[1]{{\fontsize{8.6pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\renewcommand*{\skillsetstyle}[1]{{\fontsize{8.6pt}{1em}\bodyfontlight\color{text} #1}}
+
+% One-row entries: title, position on the same line, place and dates on the right.
+\renewenvironment{cventries}{\vspace{\acvSectionContentTopSkip}}{\par}
+\renewenvironment{cvskills}{%
+  \vspace{\acvSectionContentTopSkip}
+  \setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+  \setlength\tabcolsep{1ex}\setlength{\extrarowheight}{0pt}
+}{\par}
+% Usage: \cvrow{<title>}{<position or empty>}{<place and dates>}{<description>}
+\newcommand*{\cvrow}[4]{%
+  \vspace{1.0mm}
+  \setlength\tabcolsep{0pt}\setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 5cm} R{5cm}}
+    \entrytitlestyle{#1}\ifempty{#2}{}{\entrypositionstyle{\ \textbar\ #2}} & \entrydatestyle{#3} \\
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#4}}
+  \end{tabular*}\par
+}
+
+% Keep ATS keywords in one piece at line ends.
+\hyphenation{Algorithmic performance}
+
+\name{Thomas}{VAUDESCAL}
+\position{Quantitative Developer | Quantitative Researcher}
+\mobile{+33 782223321}
+\email{vaudescal.t@gmail.com}
+\github{github.com/Thomas4390}
+\linkedin{linkedin.com/in/thomas-vaudescal-739b36156/}
+\hypersetup{
+  pdftitle={Thomas Vaudescal - Quantitative Developer and Researcher},
+  pdfauthor={Thomas Vaudescal},
+  pdfsubject={Graduate Quant Developer / Quant Researcher application}
+}
+
+\begin{document}
+\makecvheader
+
+\input{cv/summary.tex}
+\input{cv/education.tex}
+\input{cv/experience.tex}
+\input{cv/projects.tex}
+\input{cv/skills.tex}
+\end{document}
