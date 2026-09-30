@@ -4,36 +4,34 @@ Consultant développeur en finance quantitative · Quantitative Developer & Fina
 
 ## CV
 
-| Langue / Language | PDF | Sources LaTeX |
+| Version | PDF | Sources LaTeX |
 | --- | --- | --- |
-| Français | [CV français — 2 pages](french/out/CV_Thomas_Vaudescal_FR.pdf) | [french/resume.tex](french/resume.tex) |
-| English | [English CV — 2 pages](out/CV_Thomas_Vaudescal_EN.pdf) | [resume.tex](resume.tex) |
-| English, quant | [Quant Developer / Researcher CV, 2 pages](out/CV_Thomas_Vaudescal_Quant_Graduate.pdf) | [quant-graduate/resume.tex](quant-graduate/resume.tex) |
+| Français | [CV français, 2 pages](out/CV_Thomas_Vaudescal_FR.pdf) | [french/](french/) |
+| English | [English CV, 2 pages](out/CV_Thomas_Vaudescal_EN.pdf) | [english/](english/) |
+| English, quant | [Quant Developer / Researcher CV, 2 pages](out/CV_Thomas_Vaudescal_Quant_Graduate.pdf) | [quant-graduate/](quant-graduate/) |
 
-Les deux versions utilisent le gabarit Russell original et présentent le même parcours. Les rubriques sont réparties dans `cv/` et `french/cv/`.
+## Structure
 
-Both versions use the original Russell template and cover the same experience. Individual sections are stored in `cv/` and `french/cv/`.
+```
+english/          CV anglais : resume.tex, rubriques dans cv/, classe russell.cls
+french/           CV français : resume.tex, rubriques dans cv/, classe russell.cls
+quant-graduate/   CV quant : resume.tex, rubriques dans cv/, classe russell-ats.cls (lisible par les ATS)
+fonts/            polices partagées par les trois versions
+out/              PDF compilés
+```
+
+Les versions anglaise et française utilisent le gabarit Russell original. La version quant utilise `russell-ats` : pas d'icônes, polices Roboto intégrées.
+
+The English and French versions use the original Russell template. The quant version uses `russell-ats`: no icons, embedded Roboto fonts.
 
 ## Compilation
 
-Utiliser XeLaTeX avec les packages Roboto, Source Sans Pro, Font Awesome 5 et Babel français. Sur Overleaf, choisir XeLaTeX et le fichier principal de la langue souhaitée.
+Utiliser XeLaTeX. Les versions anglaise et française demandent aussi les packages Source Sans Pro, Font Awesome 5 et Babel français. Lancer la commande depuis le dossier de la version.
 
-Use XeLaTeX with Roboto, Source Sans Pro, Font Awesome 5 and French Babel support. On Overleaf, select XeLaTeX and the main file for the desired language.
-
-Version anglaise, depuis la racine du dépôt / English version, from the repository root:
+Use XeLaTeX. The English and French versions also need Source Sans Pro, Font Awesome 5 and French Babel. Run the command from the version's folder.
 
 ```bash
-xelatex -interaction=nonstopmode -halt-on-error -output-directory=out -jobname=CV_Thomas_Vaudescal_EN resume.tex
-```
-
-Version française, depuis le dossier `french/` / French version, from the `french/` directory:
-
-```bash
-xelatex -interaction=nonstopmode -halt-on-error -output-directory=out -jobname=CV_Thomas_Vaudescal_FR resume.tex
-```
-
-Version quant de deux pages, depuis le dossier `quant-graduate/` / Two-page quant version, from the `quant-graduate/` directory (classe `russell-ats`, polices du dossier `fonts/` / `russell-ats` class, fonts from the `fonts/` folder):
-
-```bash
-xelatex -interaction=nonstopmode -halt-on-error -output-directory=../out -jobname=CV_Thomas_Vaudescal_Quant_Graduate resume.tex
+cd english        && xelatex -interaction=nonstopmode -halt-on-error -output-directory=../out -jobname=CV_Thomas_Vaudescal_EN resume.tex
+cd french         && xelatex -interaction=nonstopmode -halt-on-error -output-directory=../out -jobname=CV_Thomas_Vaudescal_FR resume.tex
+cd quant-graduate && xelatex -interaction=nonstopmode -halt-on-error -output-directory=../out -jobname=CV_Thomas_Vaudescal_Quant_Graduate resume.tex
 ```
